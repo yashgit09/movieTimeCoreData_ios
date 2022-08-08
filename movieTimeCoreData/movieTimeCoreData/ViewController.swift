@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     var persistentContainer: NSPersistentContainer!
     var movies: [Movie]!
+    var user: Users!
     
     @IBOutlet weak var movieTitle: UITextField!
        

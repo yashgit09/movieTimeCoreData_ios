@@ -97,7 +97,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="1Kp-kg-d47" kind="show" id="S8Y-hb-6zY"/>
+                                    <segue destination="1Kp-kg-d47" kind="show" identifier="movie" id="S8Y-hb-6zY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -109,7 +109,7 @@
                     <navigationItem key="navigationItem" title="Users" id="8Vx-z1-4bg">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gcb-jd-ddd">
                             <connections>
-                                <segue destination="OIc-4k-wah" kind="show" id="so8-hr-1nS"/>
+                                <segue destination="OIc-4k-wah" kind="show" identifier="add" id="so8-hr-1nS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -186,7 +186,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fYc-Xt-bDh"/>
+        <segue reference="oTz-3N-GUB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

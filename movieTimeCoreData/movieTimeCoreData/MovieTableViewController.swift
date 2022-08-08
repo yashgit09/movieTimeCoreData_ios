@@ -12,6 +12,7 @@ class MovieTableViewController: UITableViewController {
 
     var persistentContainer: NSPersistentContainer!
     var movies: [Movie] = []
+    var user: Users!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,12 @@ class MovieTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+       guard
+        let movieArray = user.movies?.allObjects as? [Movie]
+        else{
+           preconditionFailure("user did not have a Movie attribute")
+       }
+        movies = movieArray
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -107,6 +114,7 @@ class MovieTableViewController: UITableViewController {
             let dst = segue.destination as! ViewController
             dst.persistentContainer = persistentContainer
             dst.movies = movies
+            
         }
     }
     

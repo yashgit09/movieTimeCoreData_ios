@@ -104,10 +104,22 @@ class UserTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        
+        if segue.identifier == "add"{
         let dst = segue.destination as! AddUserViewController
         dst.persistentContainer = persistentContainer
+            dst.users = users
+        }
+    
+      if segue.identifier == "movie"{
+        guard
+            let index = tableView.indexPathForSelectedRow?.row
+        else{ preconditionFailure("could not get selected row")
+            
+        }
+        let dst = segue.destination as! MovieTableViewController
+        dst.persistentContainer = persistentContainer
+        dst.user = users[index]
     }
     
-
+    }
 }

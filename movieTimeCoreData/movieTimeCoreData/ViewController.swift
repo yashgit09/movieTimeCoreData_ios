@@ -35,7 +35,8 @@ class ViewController: UIViewController {
         moc.performAndWait {
             let movie = Movie(context: moc)
            movie.title = self.movieTitle.text
-            
+            movie.user = user
+            user.addToMovies(movie)
             do{
                 try moc.save()
                 self.movies.append(movie)

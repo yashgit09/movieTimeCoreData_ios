@@ -114,7 +114,7 @@ class MovieTableViewController: UITableViewController {
             let dst = segue.destination as! ViewController
             dst.persistentContainer = persistentContainer
             dst.movies = movies
-            
+            dst.user = user
         }
     }
     
